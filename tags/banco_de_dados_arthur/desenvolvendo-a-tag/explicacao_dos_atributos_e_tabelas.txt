@@ -1,0 +1,28 @@
+Universidade Federal do Rio de Janeiro
+Processo Seletivo do GRIS 2020
+Candidato: Felipe de Jesus Araujo da Conceição
+TAG 1 de Banco de Dados - Arthur Castro
+
+Resumo: Este arquivo contém uma pequena explicação das entidades e atributos para a TAG 1 de Banco de dados do processo seletivo do GRIS 2020
+
+1) Entidade(Tabela): candidatos --> necessária para listar os(as) candidatos(as) que estão participando do processo seletivo.
+   Atributos: 
+	- nome_completo: Necessário para o os membros do GRIS saberem o nome do candidato no processo seletivo;
+	- dre: Importante para identificar que o candidato(a) é aluno da UFRJ;
+	- email: Importante para entrar em contato com o candidato;
+	- data_de_nascimento: Importante para saber qual a faixa etária aproximada do candidato(a);
+	- nome_de_usuario_telegram: Outra forma muito importante e mais comum atualmente para se entrar em contato;
+
+2) Entidade(Tabela): tags --> necessária para ter um controle de tags no processo seletivo;
+   Atributos:
+	- nome_da_tag: importante para saber o nome da tarefa;
+	- assunto: importante para saber o assunto da tarefa;
+	- objetivo: importante para sabermos qual o resultado/experiência esperados(as) da finalização da tag trará para o candidato(a);
+	- dicas: É importante passar algumas dicas de como concluir a tarefa o(a) voluntário(a);
+	- data_de_entrega: Prazo final para a entrega da tag;
+
+3) Entidade(Tabela): avaliacao --> esta tabela se refere a avaliação final dos(as) candidatos(as) para saber se foram aprovados ou não no processo;
+   Atributos: 
+	- tags_feitas: Importante para saber quais tags(tarefas) foram concluidas pelo(a) candidato(a);
+	- nome_do_candidato: Identificar pessoa em que esta avaliação está se referindo;
+	- nota: pontuação do(a) candidato(a) ao final da avaliação.
