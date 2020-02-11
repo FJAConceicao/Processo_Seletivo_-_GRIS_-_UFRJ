@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 //#include <ctypes.h>
+#define tabelaBase64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
 int main()
 {	
