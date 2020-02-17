@@ -1,0 +1,12 @@
+Tag de Web - Fontes consultadas:
+
+1)
+
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+https://pt.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+https://www.alura.com.br/artigos/desmistificando-o-protocolo-http-parte-1
+
+2)
+
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+https://www.clickminded.com/http-status-codes/
