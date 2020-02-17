@@ -10,3 +10,19 @@ https://www.alura.com.br/artigos/desmistificando-o-protocolo-http-parte-1
 
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
 https://www.clickminded.com/http-status-codes/
+
+3) 
+
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Mensagens
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers
+https://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039
+https://www.tutorialspoint.com/http/http_header_fields.htm
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Referer
+https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
+
+4) 
+
+https://pt.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview
+https://pt.stackoverflow.com/questions/118631/por-que-o-m%C3%A9todo-get-%C3%A9-considerado-seguro-e-o-m%C3%A9todo-post-inseguro-e-em-que-sit
