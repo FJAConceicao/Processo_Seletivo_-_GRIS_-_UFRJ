@@ -2,24 +2,20 @@ Entidades e atributos do processo seletivo GRIS 2020:
 
 Processo Seletivo GRIS 2020
 	- Candidatos:
+		- candidatoID --> Primary Key
 		- Nome Completo
 		- DRE
 		- Email
-		- Data de Nascimento
 		- Telegram
-	- TAGS:
+	- Tags:
+		- tagID --> Primary Key
 		- Nome da Tag
 		- Assunto
 		- Objetivo
 		- Dicas
 		- Data de Entrega
-	- Avaliação dos candidatos:
-		- Tags feitas
-		- Nome do Candidato
+	- Avaliação:
+		- avaliacaoID --> Primary Key
+		- candidatoID --> Fk reference for candidatoID
+		- tagID	      --> Fk reference for tagID
 		- Nota
-	- Avaliadores (Opcional):
-		- Nome
-		- DRE
-		- CPF
-		- Area no GRIS
-		- Tema na avaliacao
