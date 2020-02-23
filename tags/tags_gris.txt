@@ -1,0 +1,37 @@
+Tags - GRIS:
+
+-     - Git - Criar conta no github e repositório publico para as Tags.
+
+16/02 - Engenharia Social - Criar uma situação de pentest e elaborar relatório
+
+18/02 - Segurança Web 1 - Lista de exercícios e POCs
+
+26/02 - Go - Fazer portscanner via HTTP com GO
+
+29/02 - Banco de dados 1 - Criar banco de dados em MySql do processo seletivo do GRIS
+
+29/02 - Criptografia - Fazer 3 desafios do Criptopals 
+
+02/03 - Segurança Web 2 - Criar um CTF, colocar em repositório privado e enviar para breno
+
+04/03 - Engenharia Reversa - Analisar binário e escrever write-up sobre seu funcinamento
+                             Escrever programa que reverta o que foi feito pelo binário e pequena explicação sobre
+                             (OPCIONAL) Malwere Tech - Strings 1, 2, 3 
+
+07/03 - Segurança Ofensiva 1 - Criar Malwere ou elaborar relatório de ataque
+
+07/03 - Segurança Ofensiva 2 (opcional) - Criar conta no hack the box e fazer um dos desafios
+
+07/03 - Segurança Ofensiva 3 - Realizar os desafios da trilha de stack e format do exploit exercises. Fazer até stack5 e format3
+
+15/03 - Redes - Lista de exercícios
+
+15/03 - Linux - Escrever documentação da instalação do Arch Linux
+                
+15/03 - Bash  - Script de BACKUP com rotação
+
+15/03 - OTW   - Write Up dos exercícios bandints
+
+?     - Etical Hacking - Redação sobre diferenças entre Etical Hacking e Hacking ativismo e relação pessoal com isso
+
+?     - Banco de dados 2 - Analisar banco de dados MySQL e extrair informações importantes
