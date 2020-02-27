@@ -2,74 +2,108 @@
 #include <string.h>
 #include <math.h>
 
+#define BASE16TABLE "0123456789abcdefABCDEF"
+
+/*Função para pedir string hexadecimal*/
+void askForStringHexadecimal(char *string, int size) {
+    int lastCharacterIndex;
+    if(fgets(string, size, stdin) != NULL) {
+        lastCharacterIndex = strlen(string) - 1;
+        if(string[lastCharacterIndex] == '\n')
+            string[lastCharacterIndex] = '\0';
+    }
+}
+
 int main()
 {
-    int column, line, binaryFinalToDecimal = 0;
-	char caracter, strings[2][1000], stringsInBinario[2][1000] = {}, binaryFinal[1000] = "", resultXor[1000] = "";
-
-    //array com numeros de 1 ate 15 da base hexadecimal para a base binaria com 4 bits
-    const char hexToBin[16][5] = {"0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001", "1010", "1011", "1100", "1101", "1110", "1111"};
+    /** Criando variaveis que vão ser utilizadas ao longo do programa **/
+    int col, lin, binaryResultXorOperationToDecimal = 0;
+	char caracter, strings[2][1024], stringsInBinary[2][1024] = {}, binaryResultXorOperation[1024] = "", stringResultXor[1024] = "";
     
+    const char valuesInHexadecimalToBinary[16][5] = {"0000", "0001", "0010", "0011", 
+                                                     "0100", "0101", "0110", "0111", 
+                                                     "1000", "1001", "1010", "1011", 
+                                                     "1100", "1101", "1110", "1111"};
+    
+    /** Pedindo strings **/
 	printf("Informe valores hexadecimais de mesmo tamanho para as strings abaixo: \n\n");
-	printf("String 1 : "); scanf(" %[^\n]s", strings[0]);
-	printf("String 2 : "); scanf(" %[^\n]s", strings[1]);
+	printf("String 1 : "); askForStringHexadecimal(strings[0], 1024);
+	printf("String 2 : "); askForStringHexadecimal(strings[1], 1024);
 	
-	//CONVERTER AMBAS STRINGS PARA BINÁRIO E ARMAZENAR EM UM ARRAY COM 2 POSIÇÕES: 1 PARA CADA STRING
-	for(column = 0; strings[0][column] != '\0'; ++column) {
-		for(line = 0; line <= 1; ++line) {
-			if((strings[line][column] - '0') >= 0 && (strings[line][column] - '0') <= 9) {
-				strcat(stringsInBinario[line], hexToBin[(strings[line][column] - '0')]);
+    //Verificar se as string possuem o mesmo tamanho
+    if(strlen(strings[0]) != strlen(strings[1])) {
+        printf("[ERRO --> TAMANHOS_DIFERENTES!] Informe strings de mesmo tamanho!\n");
+        return 1;
+    }
+    
+    /* Verificando se as strings estão na base correta
+     * Se não, o programa mostra uma mensagem de erro e termina
+     */
+    for(col = 0; col <= 1; ++col) {
+        for(lin = 0; strings[col][lin] != '\0'; ++lin) {
+            if((strchr(BASE16TABLE, strings[col][lin]) == NULL) && (strings[col][lin] != ' ')) {
+                printf("[ERRO --> BASE_INCORRETA!] Informe a(s) string(s) corretamente!\n");
+                return 1;
+            }
+        }
+    }
+    
+    /** Removendo espaços em branco das strings, caso tenha **/
+    for(lin = 0; lin <= 1; ++lin) {
+        int count = 0;
+        for(col = 0; strings[lin][col] != '\0'; ++col) {
+            if(strings[lin][col] != ' ') {
+                strings[lin][count] = strings[lin][col];
+                ++count;
+            }
+        }
+        strings[lin][count] = '\0';
+    }
+    
+	/** Converter ambas strings para binário e armazenar em um array com 2 posições: 1 para cada string **/
+	for(col = 0; strings[0][col] != '\0'; ++col) {
+		for(lin = 0; lin <= 1; ++lin) {
+			if((strings[lin][col] - '0') >= 0 && (strings[lin][col] - '0') <= 9) {
+				strcat(stringsInBinary[lin], valuesInHexadecimalToBinary[(strings[lin][col] - '0')]);
 			} else {
-				if(strings[line][column] == 'a' || strings[line][column] == 'A')
-					strcat(stringsInBinario[line], hexToBin[10]);
-				else if(strings[line][column] == 'b' || strings[line][column] == 'B')
-                    strcat(stringsInBinario[line], hexToBin[11]);
-				else if(strings[line][column] == 'c' || strings[line][column] == 'C')
-                    strcat(stringsInBinario[line], hexToBin[12]);
-				else if(strings[line][column] == 'd' || strings[line][column] == 'D')
-                    strcat(stringsInBinario[line], hexToBin[13]);
-				else if(strings[line][column] == 'e' || strings[line][column] == 'E')
-                    strcat(stringsInBinario[line], hexToBin[14]);
-				else if(strings[line][column] == 'f' || strings[line][column] == 'F')
-                    strcat(stringsInBinario[line], hexToBin[15]);
+				if(strings[lin][col] == 'a' || strings[lin][col] == 'A')
+					strcat(stringsInBinary[lin], valuesInHexadecimalToBinary[10]);
+				else if(strings[lin][col] == 'b' || strings[lin][col] == 'B')
+                    strcat(stringsInBinary[lin], valuesInHexadecimalToBinary[11]);
+				else if(strings[lin][col] == 'c' || strings[lin][col] == 'C')
+                    strcat(stringsInBinary[lin], valuesInHexadecimalToBinary[12]);
+				else if(strings[lin][col] == 'd' || strings[lin][col] == 'D')
+                    strcat(stringsInBinary[lin], valuesInHexadecimalToBinary[13]);
+				else if(strings[lin][col] == 'e' || strings[lin][col] == 'E')
+                    strcat(stringsInBinary[lin], valuesInHexadecimalToBinary[14]);
+				else if(strings[lin][col] == 'f' || strings[lin][col] == 'F')
+                    strcat(stringsInBinary[lin], valuesInHexadecimalToBinary[15]);
 			}
 		}
-	}
-
-	//FAZER OPERAÇÃO XOR ENTRE AS DUAS STRINGS BIT A BIT
-	for(column = 0; stringsInBinario[0][column] != '\0'; ++column) {
-		caracter = ((stringsInBinario[0][column] - '0') ^ (stringsInBinario[1][column] - '0')) + '0';
-		strncat(binaryFinal, &caracter, 1);
 	}
     
-	//CONVERTER binaryFinal PARA BASE 16
-	for(column = 0; binaryFinal[column] != '\0'; ) {
-		for(line = 3; line >= 0 ; --line) {
-			binaryFinalToDecimal += (pow(2, line) * (binaryFinal[column++] - '0'));
+	/** Fazer operação xor entre as duas strings bit a bit **/
+	for(col = 0; stringsInBinary[0][col] != '\0'; ++col) {
+		caracter = ((stringsInBinary[0][col] - '0') ^ (stringsInBinary[1][col] - '0')) + '0';
+		strncat(binaryResultXorOperation, &caracter, 1);
+	}
+    
+	/** Converter binaryResultXorOperation para base 16 **/
+	for(col = 0; binaryResultXorOperation[col] != '\0'; ) {
+        
+        //converte cada 4 bits de binaryResultXorOperation para decimal 
+        for(lin = 3; lin >= 0 ; --lin) {
+			binaryResultXorOperationToDecimal += (pow(2, lin) * (binaryResultXorOperation[col] - '0'));
+            ++col;
 		}
 	
-		if(binaryFinalToDecimal >= 0 && binaryFinalToDecimal <= 9) {
-			caracter = (binaryFinalToDecimal + '0');
-			strncat(resultXor, &caracter, 1);
-		} else {
-			if(binaryFinalToDecimal == 10){
-                strcat(resultXor, "a");
-			} else if(binaryFinalToDecimal == 11){
-				strcat(resultXor, "b");
-			} else if(binaryFinalToDecimal == 12){
-                strcat(resultXor, "c");
-			} else if(binaryFinalToDecimal == 13){
-                strcat(resultXor, "d");
-			} else if(binaryFinalToDecimal == 14){
-                strcat(resultXor, "e");
-			} else if(binaryFinalToDecimal == 15){
-                strcat(resultXor, "f");
-			}
-		}
-		binaryFinalToDecimal = 0;
+        //verifica qual valor binaryResultXorOperationToDecimal corresponde em hexadecimal
+        //na macro BASE16TABLE e concatena com stringResultXor
+        strncat(stringResultXor, &BASE16TABLE[binaryResultXorOperationToDecimal], 1);
+		binaryResultXorOperationToDecimal = 0;
 	}
 	
-	printf("Fixed XOR: %s\n", resultXor);
+	printf("Fixed XOR: %s\n", stringResultXor);
 
 	return 0;
 }
