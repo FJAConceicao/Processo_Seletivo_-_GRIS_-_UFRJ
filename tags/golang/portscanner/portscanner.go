@@ -18,23 +18,27 @@ func handler(w http.ResponseWriter, r *http.Request) {
     
     for port := portInit; port <= portFinal; port++ {
         waitGroup.Add(1)
-        go scan(ip, port, &waitGroup)
+        go scan(w, ip, port, &waitGroup)
     }
+    
+    waitGroup.Wait()
 }
 
-func scan(ip string, port int, waitGroup *sync.WaitGroup) error {
+func scan(w http.ResponseWriter, ip string, port int, waitGroup *sync.WaitGroup) error {
         
     address := fmt.Sprintf("%s:%d", ip, port)
     conn, err := net.Dial("tcp", address)
 
     if err != nil {
-        fmt.Println("--> Porta",port,": Fechada")
+        fmt.Fprintf(w, "%d --> Fechada \n", port)
+        //fmt.Println("%d --> Fechada \n", port)
         waitGroup.Done()
         return err
     }
 
     conn.Close()
-    fmt.Println("--> Porta",port,": Aberta")
+    fmt.Fprintf(w, "%d --> Aberta \n", port)
+    //fmt.Println("%d --> Aberta \n", port)
     waitGroup.Done()
     return nil
 }
