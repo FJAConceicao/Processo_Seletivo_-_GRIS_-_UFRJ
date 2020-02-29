@@ -18,6 +18,10 @@ Tags - GRIS:
                              Escrever programa que reverta o que foi feito pelo binário e pequena explicação sobre
                              (OPCIONAL) Malwere Tech - Strings 1, 2, 3 
 
+07/03 - Etical Hacking - Redação sobre diferenças entre Etical Hacking e Hacking ativismo e relação pessoal com isso
+
+07/03 - Banco de dados 2 - Analisar banco de dados MySQL e extrair informações importantes
+
 07/03 - Segurança Ofensiva 1 - Criar Malwere ou elaborar relatório de ataque
 
 07/03 - Segurança Ofensiva 2 (opcional) - Criar conta no hack the box e fazer um dos desafios
@@ -31,7 +35,3 @@ Tags - GRIS:
 15/03 - Bash  - Script de BACKUP com rotação
 
 15/03 - OTW   - Write Up dos exercícios bandints
-
-?     - Etical Hacking - Redação sobre diferenças entre Etical Hacking e Hacking ativismo e relação pessoal com isso
-
-?     - Banco de dados 2 - Analisar banco de dados MySQL e extrair informações importantes
