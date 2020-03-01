@@ -7,7 +7,7 @@ Resumo: Este arquivo contém uma pequena explicação das entidades e atributos 
 
 1) Entidade(Tabela): candidatos --> necessária para listar os(as) candidatos(as) que estão participando do processo seletivo.
    Atributos:
-	- candidatoID: Número que guarda referencia do aluno nesta tabela;
+	- candidatoID: Número que guarda referência do aluno nesta tabela;
 	- nome_completo: Necessário para que os membros do GRIS saibam o nome do candidato no processo seletivo;
 	- dre: Importante para identificar que o candidato(a) é aluno da UFRJ;
 	- email: Importante para entrar em contato com o candidato;
@@ -15,6 +15,7 @@ Resumo: Este arquivo contém uma pequena explicação das entidades e atributos 
 
 2) Entidade(Tabela): tags --> necessária para ter um controle de tags no processo seletivo;
    Atributos:
+	- tagID: Número de identificação da tag nessa tabela;
 	- nome_da_tag: importante para saber o nome da tarefa;
 	- assunto: importante para saber o assunto da tarefa;
 	- objetivo: importante para sabermos qual o resultado/experiência esperados(as) da finalização da tag trará para o candidato(a);

@@ -5,13 +5,10 @@
 -- Candidato: Felipe de Jesus
 ------------------------------------------------------------------
 
--- criando banco de dados
 CREATE DATABASE PSGRIS2020;
 
--- ativando banco de dados
 USE PSGRIS2020;
 
--- criando tabelas do banco dados do PSGRIS2020
 CREATE TABLE Candidato (
 	candidatoID int NOT NULL AUTO_INCREMENT,
 	nome_completo varchar(255) NOT NULL,
