@@ -1,0 +1,3 @@
+base64 -d data.txt --> decodifica data.txt em base64 e mostra a senha
+
+chave: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR

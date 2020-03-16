@@ -1,0 +1,9 @@
+cat data.txt | sort | uniq -c
+
+O comando acima mostra a quantidade de linhas repetidas e o conteudo da linha ao lado, tipo:
+
+quantidade linha
+
+Olhando a saida do comando podemos observar a chave com quantidade 1.
+
+chave: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR

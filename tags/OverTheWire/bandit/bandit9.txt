@@ -1,0 +1,5 @@
+cat data.txt --> mostra o conteudo de data.txt
+
+Procurando a chave, temos:
+
+chave: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk

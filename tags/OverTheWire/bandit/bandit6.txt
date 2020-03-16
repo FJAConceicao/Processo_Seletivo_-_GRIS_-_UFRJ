@@ -1,0 +1,7 @@
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+o comando acima mostra o arquivo: /var/lib/dpkg/info/bandit7.password
+
+cat /var/lib/dpkg/info/bandit7.password --> mostra a senha
+
+chave: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs

@@ -1,0 +1,4 @@
+ls --> para listar os arquivos
+cat data.txt | grep millionth --> mostra a chave ao lado da palavra millionth
+
+chave: cvX2JJa4CFALtqS87jk27qwqGhBM9plV

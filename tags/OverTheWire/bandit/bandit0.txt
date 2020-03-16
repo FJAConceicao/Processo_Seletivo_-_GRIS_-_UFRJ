@@ -1,0 +1,10 @@
+Devemos fazer:
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+Digtar yes e colocar a senha "bandit0" para logar no level 0
+
+ls --> para ver os arquivos
+cat readme --> para mostrar a chave no arquivo readme
+
+chave: boJ9jbbUNNfktd78OOpsqOltutMc3MY1

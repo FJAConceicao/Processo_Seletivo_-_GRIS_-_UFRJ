@@ -1,0 +1,3 @@
+cat spaces\ in\ this\ filename --> mostra a chave
+
+chave: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK

@@ -1,0 +1,5 @@
+ls --> para listar os arquivos
+find ./ -type f -size 1033c --> para mostrar o arquivo com 1033 bytes
+cat ./maybehere07/.file2 --> mostra a chave
+
+chave: DXjZPULLxYr17uwoI01bNLQbtFemEgo7

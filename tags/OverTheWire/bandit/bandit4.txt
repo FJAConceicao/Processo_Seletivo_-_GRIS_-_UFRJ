@@ -1,0 +1,12 @@
+cd inhere/ --> entrar na pasta inhere
+ls --> lista os arquivos
+
+Testando o comando:
+
+cat < -file0X
+
+com X indo de 0 até 9, descobrimos que 
+
+cat < -file07 mostra a chave correta
+
+chave: koReBOKuIDDepwhWk7jZC0RTdopnAYKh

@@ -1,0 +1,6 @@
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+senha: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+cat < - --> mostra a chave
+
+chave: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9

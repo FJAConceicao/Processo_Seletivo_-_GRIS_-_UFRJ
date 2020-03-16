@@ -1,0 +1,5 @@
+cd inhere/ --> entrar na pasta inhere
+ls -la --> ver arquivos ocultos
+cat .hidden --> mostra a chave
+
+chave: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
