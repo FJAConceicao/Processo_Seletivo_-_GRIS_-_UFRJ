@@ -22,7 +22,6 @@ fi
 
 echo "Removendo backups com mais de 3 dias"
 data-atual=`date +%Y-%m-%d`
-for backup in `ls ~/BACKUP/`;
-do
-	
-done
+#for backup in `ls ~/BACKUP/`;
+
+tar -czvf $1`date +%Y/%m/%d`.tar.gz ~/BACKUP
